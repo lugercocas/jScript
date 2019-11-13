@@ -9,6 +9,7 @@ public class jScriptMain {
 		String input = "";
 		System.out.println("Consola jPowerSHell v1.0 Iniciada... ");
 		Scanner in = new Scanner(System.in);
+		Utility consola = new Utility();
 		while (true) {
 			System.out.print(">> ");
 			input = in.nextLine();
@@ -16,11 +17,8 @@ public class jScriptMain {
 				in.close();
 				System.out.println("Fin...");
 				break;
-			} else {
-				if (input.equalsIgnoreCase("cls")) {
-					System.out.flush();
-				}
-
+			} else {				
+				consola.interprete(input);
 			}
 		}
 	}
