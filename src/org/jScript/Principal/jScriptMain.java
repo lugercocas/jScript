@@ -7,7 +7,7 @@ public class jScriptMain {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		String input = "";
-		System.out.println("Consola jPowerSHell v1.0 Iniciada... ");
+		System.out.println("Consola jScript v1.0 Iniciada... ");
 		Scanner in = new Scanner(System.in);
 		Utility consola = new Utility();
 		while (true) {

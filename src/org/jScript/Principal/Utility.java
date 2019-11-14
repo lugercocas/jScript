@@ -4,11 +4,24 @@ public class Utility {
 
 	public void interprete(String cmlet) {
 		if (!cmlet.isEmpty()) {			
-			//System.out.println(cmlet.length());
-			if (cmlet.substring(0, 8).equalsIgnoreCase("Get-Host") && cmlet.length() >= 8 ) {
+			String[] comando = cmlet.split(" ");			
+			if (comando[0].equalsIgnoreCase("Get-Host") && cmlet.length() >= 8 ) {
 				getHost(cmlet);				
+			} else if (comando[0].equalsIgnoreCase("Get-Command") && cmlet.length() >= 11 ) {
+				getCommand(cmlet);
+			} else {
+				System.out.print("");
 			}
 		}
+	}
+
+	private void getCommand(String cmlet) {
+		// TODO Auto-generated method stub
+		System.out.println("Command      Version");
+		System.out.println("-----------  -------");
+		System.out.println(" Exit          1.0");
+		System.out.println(" Get-Host      1.0");
+		System.out.println(" Get-Command   1.0");
 	}
 
 	private void getHost(String cmlet) {
